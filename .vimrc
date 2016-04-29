@@ -1,7 +1,11 @@
+set nocompatible
+set encoding=utf-8
 syntax on
 filetype on
-filetype plugin on 
+filetype plugin on
 filetype indent on
+set number
+set ruler
 
 " flagging whitespaces
 highlight BadWhitespace ctermbg=red guibg=darkred
