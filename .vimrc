@@ -66,6 +66,14 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 0
 
+" Shortcuts
+nnoremap <leader>o :NERDTreeToggle<CR>
+nnoremap <leader>k :bnext<CR>
+nnoremap <leader>j :bprevious<CR>
+nnoremap <leader>q :bd<CR>
+nnoremap <leader>n :edit<CR>
+nnoremap <leader>v :vsplit<CR>
+
 " Color scheme
 colorscheme onedark
 let g:onedark_terminal_italics = 1
