@@ -28,6 +28,14 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'fatih/vim-go'
 
+Plugin 'tpope/vim-fugitive'
+
+"Plugin 'nvie/vim-flake8'
+
+Plugin 'joshdick/onedark.vim'
+
+Plugin 'scrooloose/nerdtree'
+
 Plugin 'scrooloose/syntastic'
 
 Plugin 'vim-airline/vim-airline'
@@ -35,6 +43,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'w0ng/vim-hybrid'
+
+"Plugin 'vim-scripts/indentpython.vim'
 call vundle#end()
 
 " Vim Airline
