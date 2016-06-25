@@ -98,6 +98,8 @@ nnoremap <leader>j :bprevious<CR>
 nnoremap <leader>q :bd<CR>
 nnoremap <leader>n :edit<CR>
 nnoremap <leader>v :vsplit<CR>
+nnoremap <leader>, :cprev<CR>
+nnoremap <leader>. :cnext<CR>
 
 " Color scheme
 colorscheme onedark
