@@ -36,7 +36,8 @@ Plugin 'fatih/vim-go'
 
 Plugin 'tpope/vim-fugitive'
 
-"Plugin 'nvie/vim-flake8'
+Plugin 'nvie/vim-flake8'
+
 
 Plugin 'joshdick/onedark.vim'
 
@@ -70,8 +71,14 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers = ['flake8']
+
+" Flake8
+let python_highlight_all = 1
+syntax on
+
 
 " Shortcuts
 nnoremap <leader>o :NERDTreeToggle<CR>
