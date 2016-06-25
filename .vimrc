@@ -40,6 +40,7 @@ Plugin 'nvie/vim-flake8'
 
 "Plugin 'yggdroot/indentline'
 
+Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'joshdick/onedark.vim'
 
@@ -81,6 +82,14 @@ let g:syntastic_python_checkers = ['flake8']
 let python_highlight_all = 1
 syntax on
 
+" YouCompleteMe
+let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" NERDTree
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 " Shortcuts
 nnoremap <leader>o :NERDTreeToggle<CR>
