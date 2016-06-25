@@ -30,6 +30,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'vim-scripts/indentpython.vim'
+
 Plugin 'fatih/vim-go'
 
 Plugin 'tpope/vim-fugitive'
@@ -48,7 +50,6 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'w0ng/vim-hybrid'
 
-"Plugin 'vim-scripts/indentpython.vim'
 call vundle#end()
 
 " Vim Airline
