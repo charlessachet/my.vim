@@ -38,6 +38,8 @@ Plugin 'tpope/vim-fugitive'
 
 Plugin 'nvie/vim-flake8'
 
+"Plugin 'yggdroot/indentline'
+
 
 Plugin 'joshdick/onedark.vim'
 
@@ -92,3 +94,6 @@ nnoremap <leader>v :vsplit<CR>
 colorscheme onedark
 let g:onedark_terminal_italics = 1
 set guifont=Inconsolata
+" Indent guides
+"let g:indentLine_color_term = 239
+"let g:indentLine_char = '|'
