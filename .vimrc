@@ -6,6 +6,7 @@ filetype plugin on
 filetype indent on
 set number
 set ruler
+set clipboard=unnamed " enable system clipboard
 
 " flagging whitespaces
 highlight BadWhitespace ctermbg=red guibg=darkred
