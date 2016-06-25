@@ -6,6 +6,7 @@ filetype plugin on
 filetype indent on
 set number
 set ruler
+set clipboard=unnamed " enable system clipboard
 
 " flagging whitespaces
 highlight BadWhitespace ctermbg=red guibg=darkred
@@ -30,11 +31,17 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'vim-scripts/indentpython.vim'
+
 Plugin 'fatih/vim-go'
 
 Plugin 'tpope/vim-fugitive'
 
-"Plugin 'nvie/vim-flake8'
+Plugin 'nvie/vim-flake8'
+
+"Plugin 'yggdroot/indentline'
+
+Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'joshdick/onedark.vim'
 
@@ -48,7 +55,6 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'w0ng/vim-hybrid'
 
-"Plugin 'vim-scripts/indentpython.vim'
 call vundle#end()
 
 " Vim Airline
@@ -69,8 +75,22 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers = ['flake8']
+
+" Flake8
+let python_highlight_all = 1
+syntax on
+
+" YouCompleteMe
+let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" NERDTree
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 " Shortcuts
 nnoremap <leader>o :NERDTreeToggle<CR>
@@ -79,8 +99,13 @@ nnoremap <leader>j :bprevious<CR>
 nnoremap <leader>q :bd<CR>
 nnoremap <leader>n :edit<CR>
 nnoremap <leader>v :vsplit<CR>
+nnoremap <leader>, :cprev<CR>
+nnoremap <leader>. :cnext<CR>
 
 " Color scheme
 colorscheme onedark
 let g:onedark_terminal_italics = 1
 set guifont=Inconsolata
+" Indent guides
+"let g:indentLine_color_term = 239
+"let g:indentLine_char = '|'
