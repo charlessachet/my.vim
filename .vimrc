@@ -93,8 +93,10 @@ nnoremap <leader>, :cprev<CR>
 nnoremap <leader>. :cnext<CR>
 nnoremap <leader><C-Up> :m .-2<CR>
 nnoremap <leader><C-Down> :m .+1<CR>
-nnoremap <leader> :set invpaste paste?<CR>
-set pastetoggle=<leader><C>p
+nnoremap <C-d> :shell<CR>
+set pastetoggle=<leader>p
+set showmode
+
 
 " Color scheme
 colorscheme onedark
